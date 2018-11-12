@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        border: 1px solid #000;
+        width: 100px;
+        height: 100px;    
+        background: #00f;    
+    }
+    /* .show{
+        background: #0f0;
+    } */
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <button>动起来</button>
+
+    <!-- <button>隐藏</button>
+    <button>显示</button>
+    <button>切换</button>
+    <button>切换透明度到</button>
+    <input type="text"> -->
+
+    <!-- <button>移除</button>
+    <button>切换</button>
+    <button>判断</button> -->
+</body>
+<script src="./jquery.js" ></script>
+<script>
+        // $('button').eq(0).click(function(){
+        //     $('.box').addClass('show')
+        // })
+        // $('button').eq(1).click(function(){
+        //     $('.box').removeClass('show')
+        // })
+        // $('button').eq(2).click(function(){
+        //     $('.box').toggleClass('show')
+        // })
+        // $('button').eq(3).click(function(){
+        //    console.log( $('.box').hasClass('show'));
+        // })
+        
+        // $('button').eq(0).click(function(){
+        //     $('.box').hide(1000)
+        // })
+        // $('button').eq(1).click(function(){
+        //     $('.box').show(1000)
+        // })
+        // $('button').eq(2).click(function(){
+        //     $('.box').toggle(1000)
+        // })
+
+    //滑动动画 窗帘式动画
+        // $('button').eq(0).click(function(){
+        //     $('.box').slideUp(1000,'swing')
+        // })
+        // $('button').eq(1).click(function(){
+        //     $('.box').slideDown()
+        // })
+        // $('button').eq(2).click(function(){
+        //     $('.box').slideToggle()
+        // })
+    
+
+    //透明度动画
+        // $('button').eq(0).click(function(){
+        //     $('.box').fadeOut(1000)
+        // })
+        // $('button').eq(1).click(function(){
+        //     $('.box').fadeIn()
+        // })
+        // $('button').eq(2).click(function(){
+        //     $('.box').fadeToggle()
+        // })
+        // $('button').eq(3).click(function(){
+        //     let num = parseFloat($('input').val())
+        //     $('.box').fadeTo(1000,num)
+        // })
+
+    //自定义动画
+    // 注意 ：animate 是异步 所以后面加css要加回调
+        $('button').eq(0).click(function(){
+            $('.box').animate({
+                background:'#0ff',
+                'width':"400",
+                height:300,
+                marginTop:100,
+               
+            },(2000)).animate({
+                marginTop:0,
+                width:100,
+                height:100
+               },2000,function(){
+                   $(this).css('width',400)
+               })
+        })
+
+
+
+
+</script>
+</html>

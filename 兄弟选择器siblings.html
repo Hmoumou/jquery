@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;padding: 0;
+    }
+    ul{
+        list-style: none; 
+    }
+    .content-top{
+        text-align: center;
+        display: flex;
+        width: 500px;
+        height: 50px;
+    }
+    .content-top li{
+        border: 1px solid #f1f1f1;
+        display: inline-block;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .content-btm{
+        width: 450px;
+       height: 50px;
+    }
+    .content-btm li{
+        display: none;
+        width: 450px;
+    }
+    .content-top .active{
+        color:#fff;
+        background: blue;
+    }
+    .content-btm  .active{
+        display: block;
+    }
+    </style>
+</head>
+<body>
+   <!-- 选项卡siblings兄弟姐妹选择器 -->
+   <ul class="content-top">
+       <li  class="active">昨天</li>
+       <li>今天</li>
+       <li>明天</li>
+   </ul>
+   <ul class="content-btm">
+        <li class="active">昨日像那东流水，理我远去不复返</li>
+        <li>今天是个好日子，心想的事儿都能成</li>
+        <li>开始的开始，我们都是孩子，最后的最后，我们变成天使</li>
+    </ul>
+</body>
+<script src='./jquery.js'></script>
+<script>
+    $('.content-top>li').click(function(){
+        $(this).addClass('active').siblings().removeClass('active')
+        $('.content-btm>li').eq($(this).index()).addClass('active').siblings().removeClass('active') 
+    })
+</script>
+
+</html>

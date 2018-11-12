@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;padding: 0;
+    }
+    .active{
+        width: 100px;
+        height: 100px;
+        background: #f00;
+    }
+    </style>
+</head>
+<body>
+    <!-- <img id="img" src="./static/66.gif" alt="我也不知道是啥" > -->
+
+    <!-- <form action="">
+        <input type="radio" name='sex' value="1">男
+        <input type="radio" name='sex' value="0">女
+    </form> -->
+
+    <!-- <h1 title="喵">我是标题</h1> -->
+    <div class="box"></div>
+    <input type="text">
+    <button>添加类名</button>
+    <button>移除类名</button>
+    <button>切换类名</button>
+    <button>是否有类名</button>
+
+</body>
+<script src="./jquery.js" ></script>
+<script>
+    //attr 里面传一个值是获取 传两个值是设置
+        // $('#img').attr({title:'小姐姐',width:700}) 
+        //attr 取不到checked值 要用prop
+        // setInterval(()=>{
+        // console.log($(':input').eq(0).prop('checked'));
+        // },2000)
+    //删除一个属性
+            // $('h1').removeAttr('title')
+            
+            //原生用classList.add() .remove() .toggle() .contains()
+            $('button').eq(0).click(function(){
+                $('.box').addClass('active')
+               console.log( $('input').val());
+            })
+            $('button').eq(1).click(function(){
+                $('.box').removeClass('active')
+            })
+            $('button').eq(2).click(function(){
+                $('.box').toggleClass('active')
+            })
+            $('button').eq(3).click(function(){
+              console.log(  $('.box').hasClass('active'));
+            })
+</script>
+</html>

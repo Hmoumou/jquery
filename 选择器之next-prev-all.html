@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <div class="box">
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p id="special">就我不是</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+      <p>我是一个卖报的小行家</p>
+  </div>  
+</body>
+<script src="./jquery.js" ></script>
+ <script>
+     //命中选中的下一个
+        // $('#special').next().css('color','#f00')
+     //命中选中的下面所有
+        // $('#special').nextAll().css('color','#f00')
+    //命中选中的上一个
+        // $('#special').prev().css('color','#f00')
+    //命中选中的上面所有
+        // $('#special').prevAll().css('color','#f00')
+        //跟上面一个作用
+        // $('#special').prevUntil().css('color','#f00')
+
+
+        // 原生JS 
+        // let spe = document.getElementById('special')
+        // spe.nextElementSibling.style.color = '#f00'
+        // spe.previousElementSibling.style.color = '#f00'
+
+    // .end() 回到最近一次破坏之前的状态 eg：
+        // $('#special').nextAll().css('color','#f00')
+        // .end().prevAll().css('color','#0f0')
+        // .end().css('color','#ff0')
+
+        //addback 加上自身
+        $('#special').nextAll().addBack().css('color','#f00')
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;padding: 0;
+    }
+    
+    </style>
+</head>
+<body>
+   <div class="box">
+       <!-- 姓名：<input type="text">
+       <br>
+       <br>
+       <textarea name="fruit" id="text" cols="30" rows="10">
+        </textarea> -->
+
+        <!-- <p>就是我</p> -->
+
+        手机号：<input id="phone" type="tel" >
+        <button>自定义事件</button>
+   </div>
+</body>
+<script  src="./jquery.js"></script>
+<script>
+     //ui事件   
+        //select 选中时触发 选择事件
+            // $('#text').select(function(){
+            //     console.log($(this).val());
+            // })
+        //scroll 滚动事件 
+        //resize  调整大小 当窗口大小改变时触发这个函数
+            // $(window).resize(function(){
+            //     let clientWidth = document.documentElement.clientWidth
+            //     $('p').css('font-size',clientWidth*0.1)
+            // }) 
+    //焦点事件
+        //focus聚焦  blur失焦
+            // $('#phone').blur(function(){
+            //     let reg = /^1[3-8]\d{9}$/
+            //     let val = reg.test($(this).val())
+            //     if(val){
+            //         $('#false').remove()
+            //         if($('#true')[0]){ return }
+            //         $('<div id="true" style="color:green">格式正确</div>')
+            //         .appendTo($('.box'))                   
+            //     }else{
+            //         $('#true').remove()
+            //         if($('#false')[0]){  return  }
+            //         $('<div id="false" style="color:red">格式错误</div>')
+            //         .appendTo($('.box'))           
+            //     }               
+            // })
+        //聚焦事件
+                // $('#phone').focus(function(){
+                //     console.log('我也不知道聚焦有什么用');
+                // })
+        //鼠标事件 click点击事件 dbclick 双击事件 mousedown 鼠标按下
+        //mouseup鼠标抬起触发 mouseover 鼠标划过触发 mouseout 鼠标离开时触发
+        //mousemove 鼠标在元素上移动时触发 mouseenter 鼠标进入时触发
+
+        //键盘事件
+            //按键按下时触发
+            // $('#phone').keydown(function(e){
+            //     console.log(e.keyCode);
+            // })
+            //按键抬起时才会触发
+            // $('#phone').keyup(function(e){
+            //     console.log(e.keyCode);
+            // })
+            //只对英文字符起作用
+            // $('#phone').keypress(function(e){
+            //     console.log(e.keyCode);
+            // })
+        //表单事件  
+            //submit 提交事件 event.preventDefault() 阻止默认事件
+            //change 事件 失焦时触发 e.target.value 获取值
+
+        //自定义事件
+                //两种触发方式 trigger  触发事件，而且是真是的事件
+                //triggerHandle 触发事件，是用户自定义的事件，例如 focus事件触发时，
+                //并不会聚焦，但是会执行focus的事件处理函数
+                //自定义事件是用trigger定义任意事件。然后用on去监听这个事件
+                    // $('button').click(function(){
+                    //     $('.box').trigger('haha','哈哈哈')
+                    // })
+                    // $('.box').on('haha',function(e,text){
+                    //     console.log(e,text);
+                    // })    
+            
+</script>
+</html>

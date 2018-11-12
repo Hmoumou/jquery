@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+    }
+    .aa{
+        width: 300px;
+        height: 300px;
+        background: #f0f;
+    }
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+        <p>阿尼哟~我只是一个路过的人</p>
+    </div> -->
+    <!-- <img src="./static/33.jpg" > -->
+    <div class="box">
+        翱翔于九天之外
+        <p>你好，我是赛利亚</p>
+    </div>
+    <!-- <div class="aa">
+
+    </div> -->
+    <button>删除</button>
+    <!-- <div class="box">
+
+    </div>
+    <div class="box">
+        
+    </div> -->
+
+
+</body>
+<script src='./jquery.js'></script>
+<script>
+    // let htmlstr = `<h1>我是标题</h1>`
+
+    //原生JS
+        //    console.log( document.querySelector('.box').innerHTML); 
+        // console.log(document.querySelector('.box').innerText);
+        // console.log(document.querySelector('.box').textContent);
+        //attr 选择属性
+        // $('img').attr({ width:300,height:300,})
+  
+    var h1 = $('<h1>我是添加的h1</h1>')
+    //增加一个DOM 元素
+        // prepent appent 的区别 一个加在开头 一个加在结尾
+            // $('.box').append(h1)
+            //== h1.appendTo($('.box'))
+            //== $('.box').prepend(h1)
+            //==h1.prependTo($('.box'))
+        //插入一个元素到。。之前 ..之后
+            // $('.box').before(h1)
+            // $('.box').after(h1)
+            // h1.insertBefore($('.box')) 
+            // h1.insertAfter($('.box')) //之后
+    //包裹元素
+         // wrap是被包裹 一个类的元素的每一个 只能已存在的元素被新创建的元素包裹
+            //$('.box').wrap($('<div>你好</div>'))
+        // wrapALL是包裹一个类的整体    
+            // $('.box').wrapAll($('<div>你好</div>'))
+        //wrapInner 是用新创建的元素 包裹选中元素的内部
+        // $('.box').wrapInner($("<div>白玫瑰，你从哪听到的</div>"))
+
+    //删除元素
+        // 原生JS删除元素
+            // let box = document.querySelector('.box')
+            // let btn = document.querySelector('button')
+            // btn.onclick = function(){
+            //         // box.parentNode.removeChild(box) //找到父亲删除儿子
+            //         box.remove() //直接remove ~~
+            // }
+
+        //使用jquery删除元素
+            //好好用哦~
+            // $('button').click(function(){
+            //     $('.box').remove()
+            // })
+        //jq清空节点
+            // $('button').click(function(){
+            //     // $('.box').html('')
+            //     //== $('.box').empty() // 清空选中元素的内部（留空壳子）
+            //    let box = $('.box').detach() //把指定元素从指定的位置解开（不删除它附带的资源，事件等）           
+            //     setTimeout(()=>{
+            //         $('.aa').prepend(box)
+            //     },2000)
+            // })
+
+        //修改元素
+            var h1 = $('<h1>我是h1</h1>')
+            // $('p').replaceWith(h1)
+            //h1.replaceAll($('p'))
+
+        //复制元素clone
+                $('.box').click(function(){
+                    alert('1111')
+                })
+                $('button').click(function(){
+                var box =  $('.box').clone(true)
+                //如果不带参数ture 则只复制这个元素 元素中的事件带不过去
+                    $('body').append(box)
+                })
+
+
+
+</script>
+</html>

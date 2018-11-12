@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    body{
+        padding: 100px;
+    }
+    li{
+        list-style: none;
+        line-height: 2;
+    }
+    </style>
+</head>
+<body>
+    <!-- <div class="box"></div> -->
+    <input type="text">
+    <button>
+        按钮
+    </button>
+    <ul class="box">
+        <li>事件委托</li>
+    </ul>
+</body>
+<script src="./jquery.js" ></script>
+<script>
+            // let btn = document.querySelector('button')
+            // btn.addEventListener('click',function(){
+            //     console.log('事件1');
+            // })
+            // btn.addEventListener('click',function(){
+            //     console.log('事件2');
+            // })
+
+            //jq 绑定事件 bind 绑定多个事件 （如加多个事件，最好是用bind绑定一下）
+                // $('button').bind('click',function(){
+                //     console.log("事件1");
+                // })
+                // $('button').bind('click',function(){
+                //     console.log("事件2");
+                // })
+
+            //移除绑定事件
+                // setTimeout(()=>{
+                //     $('button').unbind('click')
+                // },2000)
+        //事件委托
+            //原生写法
+            // var btn = document.querySelector('button')
+            // var input = document.querySelector('input')
+            // var ul = document.querySelector('.box')
+            // var lis = Array.from(document.querySelectorAll('li'))
+ 
+            // btn.onclick = function(){
+            //   let val = input.value
+            //   let newLi = document.createElement('li')
+                //方案一
+                //   newLi.onclick = function(){
+                //       alert(this.innerText)
+                //   }
+            //   newLi.innerText = val
+            //   ul.appendChild(newLi)
+            //   input.value = ''
+            // }
+        //    lis.forEach((item)=>{
+        //       item.onclick = function(){
+        //           alert(this.innerText)
+        //       }
+        //    })
+        // 方案二
+            // ul.onclick = function(e){
+            //   if(e.target.nodeName == 'LI'){
+            //       alert(e.target.innerText)
+            //   }
+            // }
+
+            //jquery 写法
+                // $('button').click(function(){
+                //     let $value = $('input').val()
+                //     $('.box').append($(`<li>${$value}</li>`))
+                //     $('input').val('')
+                // })
+                // $('.box').on('click',function(){    
+                //         alert($(this).text())
+                // })
+</script>
+</html>

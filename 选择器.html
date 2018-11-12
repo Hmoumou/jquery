@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .box  {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+       
+    }  
+    </style>
+</head>
+<body>
+    <!-- <button id='btn'>go</button>
+    <button id='btn2'>标记的元素</button> -->
+    <div class="box" title="aa" style="display:none">111</div>
+    <div class="box" style="visibility: hidden"><p></p></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <!-- <div class="big"></div> -->
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+</body>
+<script src='./jquery.js'></script>
+<script>
+        // $('.box').css({
+        //     background: 'red',
+        // })
+        // $('.big').css({
+        //     width:100,
+        //     height:100,
+        //     background:'blue',
+        //     border:' 1px solid #000',
+        // })
+
+    //基本过滤选择器
+        //指定某一个
+        // $('.box').eq(1).css({
+        //     background:'red'
+        // })
+        //.box的最后一个
+        // $('.box').last().css('background','#ff0')
+        //.box的第一个
+        // $('.box').first().css('background','#f00')
+        //取非  取不是title = aa的
+        // $('.box').not('[title=aa]').css('background','#f00')
+        //奇数命中
+        // $('.box:odd').css('background','#ff0')
+        //偶数命中
+        // $('.box:even').css('background','#ff0')
+        //大于命中
+        // $('.box:gt(0)').css('background','#ff0')
+        //小于命中
+        // $('.box:lt(1)').css('background','#ff0')
+        //命中所有标题
+        // $(':header').css('background','#f00')
+
+    //animated 标记动的元素
+        // function go() {
+        //     $('.box').eq(0).animate({'width':'500'},2000,'swing')
+        //     $('.box').eq(0).animate({'width':'100'},2000,'swing',go)
+        //     $('.box').eq(0).animate('width','500')
+        // }
+
+        // $('.box').css({ background:'red'})
+        // $('#btn').click(function(){
+        //     go()
+        // })
+        // $('#btn2').click(function(){
+        //    $(':animated').css('background','#0f0')
+        // })
+
+
+
+        //子元素过滤选择器
+            //：root 命中整个html
+            // $(':root').css('font-size','20px')
+            //:nth-child() 选中父亲的第几个孩子
+            //:first-child() 选中父亲的第一个孩子
+            //:last-child() 选中父亲的最后一个孩子
+            //:nth-last-child() 选中父亲的倒数第几个孩子
+            //:only-child() 选中父亲的唯一的一个孩子
+            //:nth-child(2n) 选中父亲的排行偶数的孩子
+            //:nth-child(2n-1) 选中父亲的排行奇数的孩子
+            //:nth-of-type() 命中每家同类孩子中的第几个
+            //:first-of-type 命中每家同类孩子中的第一个
+            //:last-of-type 命中每家同类孩子中的最后一个
+            //:nth-last-of-type 命中每家同类孩子中的倒数第几个
+            //:only-of-type 命中父类中同类孩子中的唯一一个
+
+
+        //内容过滤选择器
+            ///命中指定内容box
+                // $('.box:contains("111")').css('width','300')
+            //命中box中有指定标签的那一个
+                // $('.box:has(p)').css('background','gold')
+            //命中内容为空的元素
+                //  $('.box:empty').css('background','#00f')
+            //命中内容不为空的元素
+                //  $('.box:parent').css('height','200')
+        //可见性过滤选择器
+            //命中隐藏的元素
+                // $?('.box:hidden').css('width','50')
+            //命中显示的元素
+                // $('.box:visible').css('height','50')
+        //属性过滤选择器
+            //跟css一致
+        //表单元素属性过滤选择器
+            // ：input 命中所有表单元素  ：text 命中所有文本框
+            //：pasword 命中所有密码框   :radio  命中所有单选框
+            //:checkbox  命中所有复选框 :submit 命中所有提交按钮
+            // :image 命中所有的图片按钮  :reset 命中所有重置按钮
+        //过滤选择器
+            // $('.box').filter(function(index){
+            //     if(index == 3){
+            //         return true
+            //     }
+            // }).css('background','blue')
+
+            // $('.box').slice(2,4).css('background','#f00')
+            //命中选中到的
+</script>
+</html>

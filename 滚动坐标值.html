@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .container{
+            /* width: 200px;
+            height: 200px;
+           
+            overflow-y: scroll; */
+            position: relative;
+            width: 500px;
+            background: #0ff;
+            height: 500px;
+            margin-left: 50px;
+
+        }
+        .box{
+            position: absolute;
+            left:90px;
+            top: 100px;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div class="box">
+            <p>11</p>
+            <p>11</p>
+            <p>22</p>
+        </div>
+       
+   </div>
+   <button>回顶部</button>
+</body>
+<script src="./jquery.js" ></script>
+<script>
+    //滚动坐标值
+        // $('.container').scroll(function(){
+        //     console.log($(this).scrollTop())
+        // })
+        // $('button').click(function(){
+        //     $('.container').scrollTop(0)
+        // })
+    //文档坐标值 相对于文档的左上角而言 offset()
+    //   console.log($('.box').offset().left);      
+    //   console.log($('.box').offset().top); 
+    console.log($('.box').offset().left);     
+    console.log($('.box').position().left);    
+    
+</script>
+</html>
